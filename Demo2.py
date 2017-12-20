@@ -8,6 +8,6 @@
 
 greeting = 'Hello'
 if greeting == 'Hello':
-    print('你好')
+    print('你好!!!!!!！！!!!')
 else:
     print('出错了')
