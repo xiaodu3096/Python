@@ -47,24 +47,45 @@
 #             continue
 #
 
+#
+# nums = int(input('请输入数字：'))
+# if 0 < nums < 10:
+#     if nums**1 == nums:
+#         print('输入的数字是阿斯特朗数')
+#     else:
+#         print('输入的数字不是阿斯特朗数')
+# elif  10 <= nums <= 99:
+#     if int(nums / 10)**2 + (nums % 10)**2 == nums:
+#         print('输入的数字是阿斯特朗数')
+#     else:
+#         print('输入的数字不是阿斯特朗数')
+# elif 100 <= nums <= 1000:
+#     if int(nums / 100)**3 + int((nums % 100)/10)**3 +int((nums % 100)%10)**3 == nums:
+#         print('输入的数字是阿斯特朗数')
+#     else:
+#         print('输入的数字不是阿斯特朗数')
 
-nums = int(input('请输入数字：'))
-if 0 < nums < 10:
-    if nums**1 == nums:
-        print('输入的数字是阿斯特朗数')
-    else:
-        print('输入的数字不是阿斯特朗数')
-elif  10 <= nums <= 99:
-    if int(nums / 10)**2 + (nums % 10)**2 == nums:
-        print('输入的数字是阿斯特朗数')
-    else:
-        print('输入的数字不是阿斯特朗数')
-elif 100 <= nums <= 1000:
-    if int(nums / 100)**3 + int((nums % 100)/10)**3 +int((nums % 100)%10)**3 == nums:
-        print('输入的数字是阿斯特朗数')
-    else:
-        print('输入的数字不是阿斯特朗数')
 
+nums = input('请输入数字：')
+
+if type(nums) == type(0):
+    if 0 < nums < 10:
+        if nums**1 == nums:
+            print('输入的数字是阿斯特朗数')
+        else:
+            print('输入的数字不是阿斯特朗数')
+    elif  10 <= nums <= 99:
+        if int(nums / 10)**2 + (nums % 10)**2 == nums:
+            print('输入的数字是阿斯特朗数')
+        else:
+            print('输入的数字不是阿斯特朗数')
+    elif 100 <= nums <= 1000:
+        if int(nums / 100)**3 + int((nums % 100)/10)**3 +int((nums % 100)%10)**3 == nums:
+            print('输入的数字是阿斯特朗数')
+        else:
+            print('输入的数字不是阿斯特朗数')
+else:
+    print('请输入数字格式')
 
 # 153
 # print('While方式算法')
