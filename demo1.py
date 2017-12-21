@@ -67,8 +67,7 @@
 
 
 nums = input('请输入数字：')
-
-if type(nums) == type(0):
+if type(nums) == 'int':
     if 0 < nums < 10:
         if nums**1 == nums:
             print('输入的数字是阿斯特朗数')
