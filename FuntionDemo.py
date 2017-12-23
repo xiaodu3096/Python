@@ -155,22 +155,30 @@
 #     return fact_iter(num - 1,num * pro)
 #
 # print('调用递归函数执行结果为:',fact(1000))
+#
+# L1 = [1,2,3,4,5,6]
+# L2 = []
+# for i in L1:
+#     if i > 3:
+#         L2.append(i)
+#
+# print('数组中大于3的数据有:',L2)
+#
+# print('数组中大于3的数据有:',[item for item in filter(lambda x:x>3,L1)])
+#
+# t = lambda : False
+# print(t())
 
-L1 = [1,2,3,4,5,6]
-L2 = []
-for i in L1:
-    if i > 3:
-        L2.append(i)
+from functools import partial
 
-print('数组中大于3的数据有:',L2)
+def mod(n , m):
+    return n % m
 
 
-print('数组中大于3的数据有:',[item for item in filter(lambda x:x>3,L1)])
+mod_by_101 = partial(mod,101)
 
-t = lambda : False
-print(t())
-
-
+print('自定义函数，100对7取余结果为:',mod(100,7))
+print('调用偏函数，100对7取余结果为:',mod_by_101(7))
 
 
 
