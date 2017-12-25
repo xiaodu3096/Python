@@ -168,19 +168,69 @@
 #
 # t = lambda : False
 # print(t())
+#
+# from functools import partial
+#
+# def mod(n , m):
+#     return n % m
+#
+#
+# mod_by_101 = partial(mod,101)
+#
+# print('自定义函数，100对7取余结果为:',mod(100,7))
+# print('调用偏函数，100对7取余结果为:',mod_by_101(7))
 
-from functools import partial
+# def GetRedNums(rang):
+#     RedNums = []
+#     counts = [1,2,3,4,5,6]
+#     for i in counts:
+#         RedNums.append(random.randint(1,rang))
+#         new_num = random.randint(1,rang)
+#         if new_num in RedNums:
+#             pass
+#             break
+#         else:
+#             continue
+#     return RedNums
+#
+# def GetBlueNum(rang):
+#     BlueNum = []
+#     BlueNum.append(random.randint(1,rang))
+#     return BlueNum
+#
+# RedList =sorted(GetRedNums(32))
+# BlueList =sorted(GetRedNums(16))
+#
+# whileCount = 0
+# # while whileCount < 10:
+# print(sorted(GetRedNums(32)))
+#     # whileCount += 1
+#
+#
+# a = [15,14,16]
+# if 15 in a:
+#     a.remove(15)
+#     print(a)
 
-def mod(n , m):
-    return n % m
+import  random
 
 
-mod_by_101 = partial(mod,101)
+def GetRedNum(rang):
+    RedNum = []
+    count = 1
+    while count <= 6:
+        new_num = random.randint(1,rang)
+        RedNum.append(new_num)
+        if new_num in RedNum:
+            count = count
+            break
+        else:
+            count += 1
+            continue
+    return RedNum
 
-print('自定义函数，100对7取余结果为:',mod(100,7))
-print('调用偏函数，100对7取余结果为:',mod_by_101(7))
 
-
+print(sorted(GetRedNum(33)))
 
 
 
